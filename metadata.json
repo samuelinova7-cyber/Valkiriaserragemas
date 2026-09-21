@@ -1,0 +1,6 @@
+{
+  "name": "Valkiria Serra Joias - Gemologia & Investimento",
+  "description": "Joalheria digital de luxo com sede em Balneário Camboriú, especializada em gemologia de elite, esmeraldas certificadas, alta joalheria e ativos tangíveis de investimento com showroom 3D interativo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
