@@ -53,7 +53,7 @@ export const CuradoriaValkiriaSection: React.FC<CuradoriaProps> = ({ onOpenConci
               <img
                 src={ASSET_IMAGES.valkiria}
                 alt="Gemóloga Internacional Valkiria Serra em seu escritório executivo em Balneário Camboriú"
-                className="w-full h-[540px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-[540px] object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />

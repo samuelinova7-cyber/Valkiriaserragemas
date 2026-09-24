@@ -44,6 +44,7 @@ import {
   INTELLECTUAL_CAPITAL_DETAILS,
   CORPORATE_EQUITY_STRUCTURE
 } from '../data/financialData';
+import { ASSET_IMAGES } from '../data/jewelryData';
 
 interface InvestorPitchProps {
   onOpenConcierge: (interest?: string) => void;
@@ -220,8 +221,13 @@ Contato Confidencial: concierge@valkiriaserra.com.br | Balneário Camboriú, SC
               <div>
                 <div className="flex items-center justify-between mb-4 border-b border-white/10 pb-4">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-xl bg-[#B76E79]/20 border border-[#B76E79]/40 text-[#B76E79] flex items-center justify-center font-bold text-lg font-serif-luxury">
-                      VS
+                    <div className="w-12 h-12 rounded-xl overflow-hidden border border-[#B76E79]/50 shadow-md relative shrink-0">
+                      <img
+                        src={ASSET_IMAGES.valkiria}
+                        alt="Valkíria Serra"
+                        className="w-full h-full object-cover object-top"
+                        referrerPolicy="no-referrer"
+                      />
                     </div>
                     <div>
                       <span className="text-xs text-zinc-400 block uppercase tracking-wider">Capital Intelectual & Gestão</span>

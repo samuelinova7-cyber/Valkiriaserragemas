@@ -1,13 +1,12 @@
 import { JewelryItem, InvestmentLot } from '../types';
 
 import heroBcImg from '../assets/images/hero_bc_emeralds_1790031944087.jpg';
-import valkiriaImg from '../assets/images/valkiria_gemologist_1790031952619.jpg';
 import investImg from '../assets/images/gold_emerald_invest_1790031987059.jpg';
 import conciergeImg from '../assets/images/concierge_bc_building_1790031969305.jpg';
 
 export const ASSET_IMAGES = {
   hero: heroBcImg,
-  valkiria: valkiriaImg,
+  valkiria: 'https://res.cloudinary.com/oqklfye9/image/upload/f_auto,q_auto/e5648e1a-9d42-435c-9286-8c534b8ed9de',
   investment: investImg,
   concierge: conciergeImg,
 };
