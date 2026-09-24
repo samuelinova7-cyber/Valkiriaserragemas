@@ -8,9 +8,14 @@ import {
   Calendar, 
   Lock,
   Globe,
-  Sparkles
+  Sparkles,
+  Gem,
+  Coins,
+  Building2,
+  GraduationCap
 } from 'lucide-react';
 import { ASSET_IMAGES } from '../data/jewelryData';
+import { INTELLECTUAL_CAPITAL_DETAILS } from '../data/financialData';
 
 interface CuradoriaProps {
   onOpenConcierge: (interest?: string) => void;
@@ -29,13 +34,13 @@ export const CuradoriaValkiriaSection: React.FC<CuradoriaProps> = ({ onOpenConci
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#B76E79]/15 border border-[#B76E79]/30 text-[#B76E79] text-xs font-semibold tracking-wider uppercase mb-3">
             <Award className="w-3.5 h-3.5" />
-            Curadoria & Autoridade Gemológica
+            Curadoria, Autoridade & Capital Intelectual
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-luxury text-white tracking-wide font-bold">
             Valkiria Serra
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-zinc-400 font-sans-luxury">
-            Gemóloga Especialista em Esmeraldas e Diamantes | Consultora Independente para Colecionadores e Investidores
+          <p className="mt-3 text-sm sm:text-base text-zinc-300 font-sans-luxury">
+            Gemóloga Internacional diplomada pela <strong className="text-white font-medium">UB Barcelona</strong> e titulada pela <strong className="text-[#B76E79] font-medium">FEEG (Federation for European Education in Gemmology)</strong>
           </p>
         </div>
 
@@ -47,21 +52,21 @@ export const CuradoriaValkiriaSection: React.FC<CuradoriaProps> = ({ onOpenConci
             <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-black group">
               <img
                 src={ASSET_IMAGES.valkiria}
-                alt="Gemóloga Valkiria Serra em seu escritório executivo em Balneário Camboriú"
-                className="w-full h-[520px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                alt="Gemóloga Internacional Valkiria Serra em seu escritório executivo em Balneário Camboriú"
+                className="w-full h-[540px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
               {/* Floating Verified Badge */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/85 backdrop-blur-md border border-white/15 flex items-center justify-between">
+              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-black/90 backdrop-blur-md border border-white/15 flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-2 text-[#14A44D] text-xs font-semibold">
                     <ShieldCheck className="w-4 h-4" />
-                    <span>Registro Gemológico Ativo</span>
+                    <span>European Gemmologist • UB Barcelona & FEEG</span>
                   </div>
                   <div className="text-white font-serif-luxury text-sm mt-0.5">
-                    Certificação Europa & Brasil • Laudos GIA/IGI
+                    Dubai • Israel (Ramat Gan) • Europa (Barcelona & Antuérpia) • Brasil
                   </div>
                 </div>
                 <div className="w-10 h-10 rounded-lg bg-[#B76E79]/20 border border-[#B76E79]/50 flex items-center justify-center text-[#B76E79] font-serif-luxury font-bold">
@@ -71,17 +76,28 @@ export const CuradoriaValkiriaSection: React.FC<CuradoriaProps> = ({ onOpenConci
             </div>
           </div>
 
-          {/* Right Column: Narrative & 360 Guarantee */}
+          {/* Right Column: Narrative & European Scientific Rigor */}
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold">
+                <GraduationCap className="w-4 h-4" />
+                <span>Titulação Internacional: UB Barcelona & FEEG (Europa)</span>
+              </div>
+
               <h3 className="text-2xl sm:text-3xl font-serif-luxury text-white">
-                "A sua garantia de procedência e valor patrimonial perpétuo."
+                "O conhecimento gemológico europeu que protege seu patrimônio e chancela a procedência de cada gema."
               </h3>
+              
               <p className="text-zinc-300 text-sm sm:text-base leading-relaxed font-sans-luxury font-light">
-                Com anos de atuação direta nas principais bacias minerárias da América do Sul e nos centros de lapidação e comércio da Europa (Antuérpia e Genebra), Valkiria Serra estabeleceu em Balneário Camboriú um novo padrão de joalheria de investimento.
+                Com formação gemológica de excelência pela prestigiada <strong>Universitat de Barcelona (UB)</strong> e titulação oficial pela <strong>FEEG (Federation for European Education in Gemmology)</strong>, Valkiria Serra atua como gemóloga internacional de padrão europeu.
               </p>
+
+              <p className="text-zinc-300 text-sm sm:text-base leading-relaxed font-sans-luxury font-light">
+                Ao avaliar esmeraldas e diamantes brasileiros nos centros de luxo de <strong>Dubai, Israel e Europa</strong>, seu propósito sempre foi a <strong>máxima valorização internacional das pedras preciosas do Brasil</strong>. Nossas esmeraldas são <strong>90% provenientes das tradicionais lavras da Bahia (Carnaíba e Pindobaçu)</strong>, com ateliê próprio de joias prontas, seleção de cangas raras para exportação e atendimento exclusivo a encomendas de <strong>esmeraldas colombianas (Muzo) de altíssimo valor</strong>.
+              </p>
+
               <p className="text-zinc-400 text-sm leading-relaxed font-sans-luxury">
-                Cada gema é avaliada individualmente em nosso laboratório próprio, verificando índices de pureza ótica, ausência de tratamentos invasivos e saturação de cor espectral antes de receber a lapidação em nosso ateliê.
+                Esse capital intelectual insubstituível é a espinha dorsal de todo o empreendimento: garante compra na fonte direta sem intermediários, laudos de conformidade internacional e uma carteira de compradores globais consolidada.
               </p>
             </div>
 
@@ -90,40 +106,40 @@ export const CuradoriaValkiriaSection: React.FC<CuradoriaProps> = ({ onOpenConci
               <div className="p-4 rounded-xl bg-black/50 border border-white/10">
                 <div className="flex items-center gap-2 text-xs font-semibold text-[#14A44D] mb-1">
                   <Globe className="w-4 h-4" />
-                  <span>1. Origem na Mina</span>
+                  <span>1. 90% Origem Bahia (Carnaíba)</span>
                 </div>
                 <p className="text-xs text-zinc-400 leading-normal">
-                  Aquisição de lotes brutos diretamente em Muzo (Colômbia) e Goiás, sem custos de intermediários.
+                  90% das esmeraldas extraídas nas tradicionais lavras da Bahia, sem intermediários.
                 </p>
               </div>
 
               <div className="p-4 rounded-xl bg-black/50 border border-white/10">
                 <div className="flex items-center gap-2 text-xs font-semibold text-[#B76E79] mb-1">
                   <Microscope className="w-4 h-4" />
-                  <span>2. Análise Gemológica</span>
+                  <span>2. Ciência Gemológica FEEG</span>
                 </div>
                 <p className="text-xs text-zinc-400 leading-normal">
-                  Inspeção microscópica de inclusões naturais ('jardin') e espectrometria de pureza mineral.
+                  Laudos microscópicos de pureza, espectrometria Raman e ausência de resinas invasivas.
                 </p>
               </div>
 
               <div className="p-4 rounded-xl bg-black/50 border border-white/10">
                 <div className="flex items-center gap-2 text-xs font-semibold text-amber-400 mb-1">
                   <Sparkles className="w-4 h-4" />
-                  <span>3. Ateliê 360° em BC</span>
+                  <span>3. Ateliê Próprio 360° em BC</span>
                 </div>
                 <p className="text-xs text-zinc-400 leading-normal">
-                  Lapidação matemática de alta reflexão e cravação manual em ligas nobres de ouro 18k e platina.
+                  Lapidação micrométrica de alto rendimento ótico e confecção de peças exclusivas assinadas.
                 </p>
               </div>
 
               <div className="p-4 rounded-xl bg-black/50 border border-white/10">
                 <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-1">
                   <Award className="w-4 h-4" />
-                  <span>4. Certificado & Custódia</span>
+                  <span>4. Rede de Private Sales Global</span>
                 </div>
                 <p className="text-xs text-zinc-400 leading-normal">
-                  Emissão de laudo com número de série gravado a laser e custódia segura em cofre blindado.
+                  Canais abertos de exportação e liquidez em Dubai, Israel, Miami e capitais europeias.
                 </p>
               </div>
             </div>
@@ -131,7 +147,7 @@ export const CuradoriaValkiriaSection: React.FC<CuradoriaProps> = ({ onOpenConci
             {/* CTA Button */}
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <button
-                onClick={() => onOpenConcierge('Consultoria Gemológica Privada com Valkiria Serra')}
+                onClick={() => onOpenConcierge('Consultoria Gemológica Privada com Valkiria Serra (FEEG / UB Barcelona)')}
                 className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold tracking-wider uppercase bg-gradient-to-r from-[#B76E79] to-[#8a424e] hover:from-[#c58690] hover:to-[#B76E79] text-white shadow-xl flex items-center gap-2 cursor-pointer transition-all"
               >
                 <Lock className="w-4 h-4" />

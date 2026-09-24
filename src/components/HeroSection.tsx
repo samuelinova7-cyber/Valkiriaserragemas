@@ -6,9 +6,10 @@ import {
   Eye, 
   MapPin, 
   Award, 
-  ChevronRight,
-  Briefcase,
-  Lock
+  ChevronRight, 
+  Briefcase, 
+  Lock,
+  GraduationCap
 } from 'lucide-react';
 import { ActiveSection } from '../types';
 import { ASSET_IMAGES } from '../data/jewelryData';
@@ -56,17 +57,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
         {/* Elegant Subtitle */}
         <div className="mt-4 sm:mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-sm sm:text-lg lg:text-xl font-sans-luxury text-[#E5E4E2] max-w-3xl tracking-widest uppercase font-light">
-          <span className="text-[#14A44D] font-medium">Gemologia de Elite</span>
+          <span className="text-[#14A44D] font-medium">Gemologia Internacional FEEG</span>
           <span className="text-zinc-600">•</span>
-          <span className="text-white font-normal">Investimentos Tangíveis</span>
+          <span className="text-white font-normal">90% Origem Bahia</span>
           <span className="text-zinc-600">•</span>
           <span className="text-[#B76E79] font-medium">Balneário Camboriú</span>
         </div>
 
         {/* Narrative Paragraph */}
         <p className="mt-6 text-sm sm:text-base text-zinc-300 max-w-2xl font-sans-luxury leading-relaxed font-light">
-          A fusão impecável entre a alta ciência gemológica internacional e a valorização patrimonial segura. 
-          Adquira esmeraldas colombianas e brasileiras de grau museu e ouro 24k direto da origem, com ateliê exclusivo e showroom 3D na <span className="text-white font-medium">"Dubai Brasileira"</span>.
+          A fusão impecável entre a ciência gemológica europeia (<strong className="text-white font-normal">UB Barcelona & FEEG</strong>) e a valorização das pedras preciosas brasileiras no mercado global. 
+          Joias prontas exclusivas com <span className="text-white font-medium">90% de esmeraldas da Bahia</span>, cangas raras e minérios de museu para exportação internacional.
         </p>
 
         {/* CTAs Group */}
@@ -93,7 +94,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             className="px-6 py-4 rounded-xl text-xs sm:text-sm font-semibold tracking-widest uppercase bg-zinc-950/90 hover:bg-zinc-900 text-[#B76E79] border border-[#B76E79]/40 backdrop-blur-md transition-all flex items-center gap-2 cursor-pointer"
           >
             <Briefcase className="w-4 h-4" />
-            <span>Proposta para Investidores (R$ 3,2M)</span>
+            <span>Proposta para Investidores (55% / 45%)</span>
           </button>
         </div>
 
@@ -102,19 +103,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="p-4 rounded-2xl bg-black/70 border border-white/10 backdrop-blur-md">
             <div className="flex items-center gap-2 text-xs text-[#14A44D] font-medium mb-1">
               <ShieldCheck className="w-4 h-4" />
-              <span>Origem Direta de Mina</span>
+              <span>90% Origem Bahia</span>
             </div>
-            <div className="text-xl font-serif-luxury text-white">0% Intermediários</div>
-            <div className="text-[11px] text-zinc-400 mt-0.5">Boyacá & Goiás para o investidor</div>
+            <div className="text-xl font-serif-luxury text-white">Boca da Mina</div>
+            <div className="text-[11px] text-zinc-400 mt-0.5">Carnaíba & Pindobaçu diretas</div>
           </div>
 
           <div className="p-4 rounded-2xl bg-black/70 border border-white/10 backdrop-blur-md">
             <div className="flex items-center gap-2 text-xs text-[#B76E79] font-medium mb-1">
               <Award className="w-4 h-4" />
-              <span>Chancela Internacional</span>
+              <span>Titulação Europeia</span>
             </div>
-            <div className="text-xl font-serif-luxury text-white">GIA & IGI Cert.</div>
-            <div className="text-[11px] text-zinc-400 mt-0.5">Laudos ópticos e espectroscópicos</div>
+            <div className="text-xl font-serif-luxury text-white">UB Barcelona & FEEG</div>
+            <div className="text-[11px] text-zinc-400 mt-0.5">European Gemmologist</div>
           </div>
 
           <div className="p-4 rounded-2xl bg-black/70 border border-white/10 backdrop-blur-md">

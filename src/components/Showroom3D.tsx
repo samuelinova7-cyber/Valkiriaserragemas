@@ -405,26 +405,45 @@ export const Showroom3D: React.FC<Showroom3DProps> = ({
       const bail = new THREE.Mesh(bailGeo, metalMaterial);
       bail.position.y = isExplodedView ? 3.2 : 2.0;
       modelGroup.add(bail);
-    } else if (modelType === 'gold_bar') {
-      // 100g Investment Gold Ingot
-      const barGeo = new THREE.BoxGeometry(2.6, 0.5, 1.4);
-      const goldBarMat = new THREE.MeshStandardMaterial({
-        color: 0xd4af37,
-        roughness: 0.15,
-        metalness: 0.95,
-      });
-      const bar = new THREE.Mesh(barGeo, goldBarMat);
-      bar.position.y = 0;
-      bar.castShadow = true;
-      modelGroup.add(bar);
-
-      // Calibrated Emeralds aligned on top of bar or tray
-      for (let i = -2; i <= 2; i++) {
-        const calibGemGeo = new THREE.CylinderGeometry(0.22, 0.15, 0.25, 8);
-        const calibGem = new THREE.Mesh(calibGemGeo, emeraldMaterial);
-        calibGem.position.set(i * 0.5, isExplodedView ? 1.2 : 0.4, 0);
-        modelGroup.add(calibGem);
+    } else if (modelType === 'canga_emerald') {
+      // Sculptural Canga: Matrix rock of biotite-schist with hexagonal emerald prisms
+      const matrixGeo = new THREE.DodecahedronGeometry(1.6, 2);
+      // Deform matrix vertices slightly for organic mineral look
+      const pos = matrixGeo.attributes.position;
+      for (let i = 0; i < pos.count; i++) {
+        const vx = pos.getX(i);
+        const vy = pos.getY(i);
+        const vz = pos.getZ(i);
+        pos.setXYZ(i, vx * (0.8 + Math.sin(vy * 3) * 0.15), vy * 0.75, vz * (0.9 + Math.cos(vx * 3) * 0.15));
       }
+      matrixGeo.computeVertexNormals();
+      const matrixMat = new THREE.MeshStandardMaterial({
+        color: 0x181a1b,
+        roughness: 0.9,
+        metalness: 0.2,
+      });
+      const matrixMesh = new THREE.Mesh(matrixGeo, matrixMat);
+      matrixMesh.position.y = 0.2;
+      matrixMesh.castShadow = true;
+      modelGroup.add(matrixMesh);
+
+      // Embedded Hexagonal Emerald Crystals emerging from rock
+      const crystalOffsets = [
+        { x: 0.4, y: 0.9, z: 0.5, h: 1.1, r: 0.22, rot: [0.2, 0.4, 0.1] },
+        { x: -0.5, y: 0.8, z: 0.3, h: 0.9, r: 0.18, rot: [-0.3, 0.2, -0.2] },
+        { x: 0.1, y: 1.2, z: -0.2, h: 1.3, r: 0.26, rot: [0.1, -0.2, 0.3] },
+        { x: 0.7, y: 0.4, z: -0.4, h: 0.7, r: 0.15, rot: [0.4, 0.5, 0.2] },
+        { x: -0.6, y: 0.3, z: -0.5, h: 0.8, r: 0.16, rot: [-0.4, -0.3, 0.1] },
+      ];
+
+      crystalOffsets.forEach((c) => {
+        const crystalGeo = new THREE.CylinderGeometry(c.r, c.r, c.h, 6);
+        const crystal = new THREE.Mesh(crystalGeo, emeraldMaterial);
+        crystal.position.set(c.x, c.y + (isExplodedView ? 0.6 : 0), c.z);
+        crystal.rotation.set(c.rot[0], c.rot[1], c.rot[2]);
+        crystal.castShadow = true;
+        modelGroup.add(crystal);
+      });
     } else {
       // Rough or Fancy Cut Museum Gemstone
       const roughGeo = new THREE.DodecahedronGeometry(1.4, 1);
@@ -658,7 +677,7 @@ export const Showroom3D: React.FC<Showroom3DProps> = ({
                     {currentItem.priceBrl.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
                   </div>
                   <p className="text-xs text-zinc-400 mt-1">
-                    Avaliação em ouro 24k e cotação de esmeralda colombiana grau A+.
+                    Joia pronta de alta assinatura com esmeralda da Bahia (90%), diamantes brasileiros e ouro 18k artesanal.
                   </p>
                 </div>
 
@@ -749,7 +768,7 @@ export const Showroom3D: React.FC<Showroom3DProps> = ({
               className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-white/10 flex items-center justify-center gap-2 transition-all"
             >
               <Award className="w-4 h-4 text-[#B76E79]" />
-              Ver Certificado Digital GIA / IGI
+              Ver Certificado Digital FEEG / UB Barcelona
             </button>
 
             <button

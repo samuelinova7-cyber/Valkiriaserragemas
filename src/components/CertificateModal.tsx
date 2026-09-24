@@ -9,7 +9,8 @@ import {
   QrCode, 
   Sparkles,
   FileCheck2,
-  Lock
+  Lock,
+  GraduationCap
 } from 'lucide-react';
 import { JewelryItem } from '../types';
 
@@ -40,7 +41,7 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
             </div>
             <div>
               <span className="text-[10px] uppercase tracking-widest text-[#14A44D] font-semibold block">
-                Laudo Gemológico Oficial
+                Laudo Gemológico Internacional
               </span>
               <h3 className="text-xl font-serif-luxury text-white font-bold">
                 {item.certifyingBody.split('-')[0]} • Certificado Digital
@@ -131,20 +132,20 @@ export const CertificateModal: React.FC<CertificateModalProps> = ({
             </div>
           </div>
 
-          {/* Valkiria Serra Signature Seal */}
+          {/* Valkiria Serra Signature Seal with European Credentials */}
           <div className="p-4 rounded-2xl bg-[#B76E79]/10 border border-[#B76E79]/20 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <ShieldCheck className="w-6 h-6 text-[#14A44D]" />
               <div>
-                <h5 className="text-xs font-semibold text-white">Chancela Gemológica Valkiria Serra</h5>
-                <p className="text-[11px] text-zinc-400">
-                  Laudo assinado e registrado sob protocolo internacional de autenticidade.
+                <h5 className="text-xs font-semibold text-white">Chancela Gemológica Internacional</h5>
+                <p className="text-[11px] text-zinc-300">
+                  Formação: <strong>UB Barcelona</strong> | Titulação: <strong>FEEG (European Gemmologist)</strong>
                 </p>
               </div>
             </div>
             <div className="text-right">
               <span className="text-[10px] text-zinc-500 block">Balneário Camboriú, SC</span>
-              <span className="text-xs font-serif-luxury text-[#B76E79] font-bold">Valkiria Serra, FGA</span>
+              <span className="text-xs font-serif-luxury text-[#B76E79] font-bold">Valkiria Serra, European Gemmologist</span>
             </div>
           </div>
 

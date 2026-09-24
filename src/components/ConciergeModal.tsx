@@ -186,9 +186,11 @@ export const ConciergeModal: React.FC<ConciergeModalProps> = ({
                   className="w-full px-3.5 py-2.5 rounded-xl bg-black/60 border border-white/10 text-white text-xs focus:border-[#B76E79] outline-none"
                 >
                   <option value="Rodada de Aporte / Investidor">Rodada de Aporte / Investidor (R$ 3,2M)</option>
-                  <option value="Lotes de Gemas de Investimento">Lotes de Gemas de Investimento & Ouro 24k</option>
-                  <option value="Joalheria de Alta Gama">Alta Joalheria / Peças Sob Medida</option>
-                  <option value="Consultoria Gemológica Privada">Consultoria Gemológica com Valkiria Serra</option>
+                  <option value="Joalheria Pronta de Alta Gama">Joalheria Pronta de Alta Gama / Peças Assinadas</option>
+                  <option value="Encomenda Especial Esmeralda Muzo (Colômbia)">Encomenda Especial: Esmeralda Muzo (Colômbia - Alta Cotação)</option>
+                  <option value="Lotes de Gemas Brasileiras">Lotes de Gemas Brasileiras (90% Bahia / Diamantes)</option>
+                  <option value="Cangas & Minérios para Exportação">Cangas & Minérios Nobres para Exportação</option>
+                  <option value="Consultoria Gemológica Privada">Consultoria Gemológica com Valkiria Serra (FEEG)</option>
                 </select>
               </div>
 

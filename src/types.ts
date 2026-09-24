@@ -16,7 +16,7 @@ export interface JewelryItem {
   category: 'aneis' | 'colares' | 'brincos' | 'pecas_unicas';
   priceBrl: number;
   emeraldCarats: number;
-  emeraldOrigin: 'Muzo, Colômbia' | 'Santa Terezinha, Brasil' | 'Campos Verdes, Brasil' | 'Zâmbia (Kagem)';
+  emeraldOrigin: string;
   emeraldCut: 'Octagonal Esmeralda' | 'Gota (Pear)' | 'Oval Brilhante' | 'Cushion Antigo' | 'Brilhante Redondo';
   emeraldColorGrade: 'Verde Intenso Imperial' | 'Verde Floresta Puro' | 'Verde Esmeralda Médio Vivo';
   clarity: 'Eye-Clean (VS1)' | 'Excelente com Jardim Natural' | 'VVS Gemológica';
@@ -25,7 +25,7 @@ export interface JewelryItem {
   metal: string;
   goldPurity: 'Ouro 18k (750)' | 'Platina 950';
   certificateCode: string;
-  certifyingBody: 'GIA - Gemological Institute of America' | 'IGI - International Gemological Institute' | 'VSGL - Valkiria Serra Gemological Lab';
+  certifyingBody: string;
   description: string;
   story: string;
   dimensions: string;
@@ -35,16 +35,17 @@ export interface JewelryItem {
   secondaryImages: string[];
   featured?: boolean;
   isInvestmentGrade?: boolean;
-  model3dType: 'ring' | 'pendant' | 'teardrop' | 'gold_bar' | 'rough_emerald';
+  model3dType: 'ring' | 'pendant' | 'teardrop' | 'rough_emerald' | 'canga_emerald';
 }
 
 export interface InvestmentLot {
   id: string;
   title: string;
-  type: 'gemas_soltas' | 'lote_lapidado' | 'combo_ouro_esmeralda' | 'gema_rara_museu';
+  type: 'gemas_soltas' | 'lote_lapidado' | 'cangas_minerio_export' | 'gema_rara_museu';
   priceBrl: number;
   weightGrams?: number;
-  totalCarats: number;
+  weightKg?: number;
+  totalCarats?: number;
   numberOfStones?: number;
   origin: string;
   currentWholesaleEst: number;
@@ -53,7 +54,7 @@ export interface InvestmentLot {
   highlights: string[];
   certificate: string;
   image: string;
-  model3dType: 'ring' | 'pendant' | 'teardrop' | 'gold_bar' | 'rough_emerald';
+  model3dType: 'ring' | 'pendant' | 'teardrop' | 'rough_emerald' | 'canga_emerald';
   badgeText: string;
 }
 
@@ -92,7 +93,7 @@ export interface ConciergeBooking {
   email: string;
   phone: string;
   city: string;
-  interest: 'Joalheria de Alta Gama' | 'Lotes de Gemas de Investimento' | 'Rodada de Aporte / Investidor' | 'Consultoria Gemológica Privada';
+  interest: 'Joalheria Pronta de Alta Gama' | 'Lotes de Gemas Brasileiras' | 'Cangas & Minérios para Exportação' | 'Encomenda Especial Esmeralda Muzo (Colômbia)' | 'Rodada de Aporte / Investidor' | 'Consultoria Gemológica Privada';
   budgetTier: 'R$ 50.000 - R$ 200.000' | 'R$ 200.000 - R$ 500.000' | 'R$ 500.000 - R$ 1.500.000' | 'Acima de R$ 1.500.000 (Private Investor)';
   preferredDate?: string;
   locationPreference: 'Boutique Privada Balneário Camboriú' | 'Concierge VIP Hotel / Heliponto' | 'Reunião Virtual Criptografada';

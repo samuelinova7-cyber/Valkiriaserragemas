@@ -8,7 +8,7 @@ export const FINANCIAL_PLAN: FinancialSimulation = {
     salesPerMonth: 40,
     monthlyRevenue: 320000,
     annualizedRevenue: 3840000,
-    growthDriver: 'Boutique digital + atendimento VIP presencial em Balneário Camboriú para o público A+ e investidores locais.',
+    growthDriver: 'Boutique digital + atendimento VIP presencial em Balneário Camboriú com foco em joias prontas de alta joalheria, gemas brasileiras e cangas de coleção.',
   },
   mediumPhase: {
     phaseName: 'Fase 2: Expansão Nacional & Alta Joalheria',
@@ -17,13 +17,13 @@ export const FINANCIAL_PLAN: FinancialSimulation = {
     salesPerMonth: 60,
     monthlyRevenue: 720000,
     annualizedRevenue: 8640000,
-    growthDriver: 'Aumento do ticket médio com peças de maior quilatagem, combos de investimento (ouro + esmeralda) e campanhas restritas em SP/RJ/Sul.',
+    growthDriver: 'Aumento do ticket médio com joias prontas de maior quilatagem, encomendas de altíssimo valor de esmeraldas colombianas (Muzo), lotes da Bahia, diamantes brasileiros e cangas para colecionadores.',
   },
   exportPhase: {
     minMonthlyRevenue: 1000000,
     maxMonthlyRevenue: 1500000,
     annualizedRevenueMax: 18000000,
-    description: 'Cenário forte consolidado com exportação direta para mercados de alto poder aquisitivo (Miami, Dubai, Zurique e Lisboa) e private sales.',
+    description: 'Cenário forte consolidado com exportação direta de pedras preciosas brasileiras, cangas e minérios para mercados globais (Dubai, Israel, Zurique, Miami e Europa) alavancando a titulação europeia FEEG/UB Barcelona e a rede de contatos construída por Valkiria Serra.',
   },
   fixedCostsMonthly: 90000,
   expensesMonthly: 90000,
@@ -32,7 +32,26 @@ export const FINANCIAL_PLAN: FinancialSimulation = {
   avgMonthlyNetProfit: 500000,
   paybackMonthsMin: 18,
   paybackMonthsMax: 30,
-  equityOfferedPercent: 20, // 20% equity for R$ 3.2M round (R$ 16M Post-Money Valuation)
+  equityOfferedPercent: 55, // 55% equity total para a integralização do capital de R$ 3.2M
+};
+
+export const CORPORATE_EQUITY_STRUCTURE = {
+  investorShare: 55,
+  investorCapital: 3200000,
+  investorRole: [
+    'Integralização total do capital social no valor de R$ 3.200.000,00',
+    'Garantia dos recursos para instalação do ateliê 360° de joias prontas em Balneário Camboriú',
+    'Financiamento do lastro físico tangível (Joias Prontas, 90% Esmeraldas da Bahia, Diamantes Brasileiros, Cangas & Minérios para Exportação)',
+    'Infraestrutura de alta segurança, blindagem, cofres e capital de giro protegido (R$ 320k)'
+  ],
+  valkiriaShare: 45,
+  valkiriaRole: [
+    'Capital Intelectual: Gemóloga Internacional pela UB Barcelona e diplomada FEEG (Federation for European Education in Gemmology)',
+    'Especialização exclusiva em pedras preciosas brasileiras: esmeraldas (90% Bahia), diamantes brasileiros e turmalinas nobres',
+    'Curadoria e seleção técnica direta de cangas e minérios de alto valor para exportação e colecionadores',
+    'Presença e reputação internacional construída em Dubai, Israel e Europa por décadas valorizando as gemas brasileiras',
+    'Direção técnica 360°, gestão operacional integral e representação oficial da marca'
+  ]
 };
 
 export const REVENUE_PROJECTION_CHART = [
@@ -47,49 +66,106 @@ export const REVENUE_PROJECTION_CHART = [
 ];
 
 export const USE_OF_FUNDS_BREAKDOWN = [
-  { category: 'Aquisição de Gemas Brutas & Estoque de Ouro 24k na Origem', amount: 1500000, percentage: 47, color: '#14A44D' },
-  { category: 'Ateliê Próprio de Lapidação e Cravação 360° em Balneário Camboriú', amount: 650000, percentage: 20, color: '#B76E79' },
-  { category: 'Infraestrutura de Segurança, Blindagem, Cofres e Concierge VIP', amount: 450000, percentage: 14, color: '#D4AF37' },
-  { category: 'Plataforma Digital 3D, Marketing Ultra-Luxury & Expansão Internacional', amount: 400000, percentage: 13, color: '#E5E4E2' },
-  { category: 'Capital de Giro e Reserva Operacional de Liquidez', amount: 200000, percentage: 6, color: '#71717A' },
+  { 
+    category: 'Lastro Físico: Joias Prontas, Pedras Brasileiras (90% Bahia) & Cangas/Minérios para Exportação', 
+    amount: 1500000, 
+    percentage: 47, 
+    color: '#14A44D',
+    detail: 'Estoque físico em joias prontas de alto valor, gemas soltas lapidadas da Bahia e cangas de esmeralda de padrão museu para exportação.'
+  },
+  { 
+    category: 'Ateliê Próprio de Joias Prontas, Lapidação e Cravação 360° em Balneário Camboriú', 
+    amount: 680000, 
+    percentage: 21, 
+    color: '#B76E79',
+    detail: 'Maquinário de lapidação micrométrica alemã, fornos de fundição e bancadas de alta joalheria para finalização de peças exclusivas.'
+  },
+  { 
+    category: 'Infraestrutura de Segurança, Blindagem, Cofres e Concierge VIP', 
+    amount: 500000, 
+    percentage: 16, 
+    color: '#D4AF37',
+    detail: 'Cofres de alta segurança, sistema de biometria, monitoramento 24h e sala de visualização privativa para clientes e investidores.'
+  },
+  { 
+    category: 'Capital de Giro e Reserva Operacional de Liquidez (Proteção Reforçada)', 
+    amount: 320000, 
+    percentage: 10, 
+    color: '#38BDF8',
+    detail: 'Proteção financeira para salários, impostos, reposição contínua de gemas e tranquilidade societária inicial.'
+  },
+  { 
+    category: 'Plataforma Digital 3D, Conteúdo Editorial & Lançamento de Alta Gama', 
+    amount: 200000, 
+    percentage: 6, 
+    color: '#E5E4E2',
+    detail: 'Investimento otimizado e eficiente: relações internacionais consolidadas em Dubai e Israel reduzem custo de marketing.'
+  },
 ];
+
+export const INTELLECTUAL_CAPITAL_DETAILS = {
+  partnerName: 'Valkiria Serra, European Gemmologist (UB Barcelona / FEEG)',
+  title: 'Gemóloga Internacional & Sócia Fundadora (45% Equity)',
+  academicCredentials: [
+    'Universitat de Barcelona (UB) - Formação Gemológica Superior Europeia',
+    'FEEG (Federation for European Education in Gemmology) - European Gemmologist',
+  ],
+  originFocus: 'Pedras Preciosas 100% Brasileiras (90% das Esmeraldas das lavras da Bahia - Carnaíba e Pindobaçu)',
+  globalExperienceHubs: ['Dubai (Emirados Árabes)', 'Israel (Ramat Gan Diamond Exchange)', 'Europa (Antuérpia, Barcelona e Genebra)'],
+  specialties: [
+    'Joias Prontas de Alta Gama & Peças Assinadas',
+    'Esmeraldas Brasileiras (90% Bahia - Carnaíba e Pindobaçu)',
+    'Grandes Encomendas de Esmeraldas Colombianas (Muzo) de Altíssimo Valor',
+    'Diamantes Brasileiros de Investimento',
+    'Cangas de Esmeralda & Minérios Nobres para Exportação',
+    'Turmalinas Brasileiras Nobres (Paraíba & Indicolita)'
+  ],
+  coreValuePillars: [
+    'Gemóloga com titulação internacional europeia (UB Barcelona e FEEG - European Gemmologist).',
+    'Propósito claro consolidado em Dubai: máxima valorização das pedras preciosas brasileiras no mercado global de luxo.',
+    'Acesso direto e exclusivo a mineradores nas lavras da Bahia (Carnaíba e Pindobaçu), eliminando intermediários.',
+    'Portfólio diversificado em Joias Prontas de alta joalheria, pedras soltas lapidadas, cangas de museu e minérios de exportação.',
+    'Rede consolidada de compradores privados em Dubai, Israel e Europa construída ao longo de décadas.',
+    'Direção técnica 360° inegociável que garante laudos de conformidade internacional e valorização patrimonial.'
+  ]
+};
 
 export const INVESTMENT_TIERS = [
   {
-    tierName: 'Cota Seed Luxury',
+    tierName: 'Cota Participativa Seed Luxury',
     minInvestment: 400000,
-    equityShare: '2.5% Equity',
+    equityShare: '6.875% Equity',
     benefits: [
-      'Pro-rata de dividendos mensais prioritários',
-      'Desconto exclusivo de 25% na aquisição de gemas e joias para acervo próprio',
-      'Acesso antecipado a novos lotes da mina antes do mercado aberto',
-      'Relatórios trimestrais com auditoria independente de estoques'
+      'Pro-rata de dividendos mensais prioritários com lastro em joias e pedras preciosas',
+      'Desconto exclusivo de 25% na aquisição de joias prontas e pedras para acervo próprio',
+      'Acesso antecipado a novos lotes da mina na Bahia e cangas de coleção antes do mercado aberto',
+      'Relatórios trimestrais com auditoria independente de estoques físicos'
     ],
     highlight: false,
     cta: 'Manifestar Interesse'
   },
   {
-    tierName: 'Cota Majoritária / Strategic Angel',
+    tierName: 'Cota Strategic Angel',
     minInvestment: 800000,
-    equityShare: '5.0% Equity',
+    equityShare: '13.75% Equity',
     benefits: [
-      'Assento no Conselho Consultivo de Gemologia & Expansão',
+      'Assento no Conselho Consultivo de Gemologia & Expansão Internacional',
       'Prioridade na recompra de lote com garantia de liquidez',
-      'Atendimento Concierge personalizado com a Gemóloga Valkiria Serra',
-      'Direito de preferência em rodadas subsequentes de expansão global (Dubai/Miami)'
+      'Atendimento Concierge personalizado com a Gemóloga Internacional Valkiria Serra (FEEG)',
+      'Direito de preferência nas operações de exportação de cangas e gemas para Dubai, Israel e Europa'
     ],
     highlight: true,
     cta: 'Solicitar Memorando Confidencial'
   },
   {
-    tierName: 'Lote Âncora (Lead Investor)',
-    minInvestment: 1600000,
-    equityShare: '10.0% Equity',
+    tierName: 'Cota Master / Lead Investor (55% Total)',
+    minInvestment: 3200000,
+    equityShare: '55.0% Equity Majoritário',
     benefits: [
-      'Participação ativa no Comitê de Alocação de Ativos e Aquisições de Minas',
-      'Garantia real em lastro físico de gemas e ouro custodiado',
-      'Acesso à rede internacional de compradores privados em Antuérpia e Genebra',
-      'Contrato estruturado de Payback acelerado em 18 meses'
+      'Controle de 55% da sociedade com plenos direitos patrimoniais e de deliberação',
+      'Integralização completa do capital com garantia de lastro real em joias prontas, gemas da Bahia e minérios nobres',
+      'Acesso direto à rede internacional de compradores privados em Dubai, Ramat Gan e Genebra',
+      'Contrato estruturado com Payback estimado entre 18 e 30 meses e retorno acelerado'
     ],
     highlight: false,
     cta: 'Agendar Reunião com Sócios Fundadores'

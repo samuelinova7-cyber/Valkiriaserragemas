@@ -54,7 +54,7 @@ export const ColecoesSection: React.FC<ColecoesProps> = ({
               { id: 'aneis', label: 'Anéis de Gala' },
               { id: 'colares', label: 'Colares & Pendentes' },
               { id: 'brincos', label: 'Brincos Calibrados' },
-              { id: 'pecas_unicas', label: 'Peças Únicas & Museu' },
+              { id: 'pecas_unicas', label: 'Peças Únicas & Encomendas Muzo' },
             ].map((cat) => (
               <button
                 key={cat.id}
@@ -68,6 +68,14 @@ export const ColecoesSection: React.FC<ColecoesProps> = ({
                 {cat.label}
               </button>
             ))}
+          </div>
+
+          {/* Bespoke Colombian Muzo Notice */}
+          <div className="mt-6 inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-zinc-950/80 border border-[#B76E79]/30 text-xs text-zinc-300">
+            <Sparkles className="w-4 h-4 text-[#B76E79]" />
+            <span>
+              <strong>Catálogo de Alta Cotação:</strong> Pedras brasileiras (90% Bahia) compõem o portfólio imediato. <strong>Esmeraldas Colombianas (Muzo)</strong> estão disponíveis sob encomenda especial para joias de altíssimo valor.
+            </span>
           </div>
         </div>
 
@@ -161,7 +169,7 @@ export const ColecoesSection: React.FC<ColecoesProps> = ({
                       className="py-2.5 px-3 rounded-xl text-xs font-semibold bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-white/10 flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
                     >
                       <Award className="w-3.5 h-3.5 text-[#B76E79]" />
-                      <span>Certificado GIA</span>
+                      <span>Certificado FEEG / UB</span>
                     </button>
 
                     <button

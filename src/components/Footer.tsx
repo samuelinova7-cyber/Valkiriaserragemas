@@ -55,14 +55,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConcierge }) =
 
           <div className="space-y-2">
             <span className="text-white font-semibold text-xs block uppercase tracking-wider">
-              Segurança & Certificação
+              Chancela & Formação Internacional
             </span>
             <div className="flex flex-wrap gap-2">
-              <span className="px-2.5 py-1 rounded-lg bg-black border border-white/10 text-[10px] text-zinc-300">
-                GIA Lab Member
+              <span className="px-2.5 py-1 rounded-lg bg-black border border-[#B76E79]/40 text-[10px] text-zinc-200">
+                UB Barcelona
               </span>
-              <span className="px-2.5 py-1 rounded-lg bg-black border border-white/10 text-[10px] text-zinc-300">
-                IGI Certified
+              <span className="px-2.5 py-1 rounded-lg bg-black border border-[#14A44D]/40 text-[10px] text-[#14A44D]">
+                FEEG European Gemmologist
               </span>
               <span className="px-2.5 py-1 rounded-lg bg-black border border-white/10 text-[10px] text-zinc-300">
                 Custódia Blindada BC
@@ -110,12 +110,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConcierge }) =
           <ul className="space-y-2">
             <li>
               <button onClick={() => onNavigate('investimentos')} className="hover:text-white transition-colors cursor-pointer">
-                Lotes de Esmeraldas Calibradas
+                Lotes de Esmeraldas da Bahia
               </button>
             </li>
             <li>
               <button onClick={() => onNavigate('investimentos')} className="hover:text-white transition-colors cursor-pointer">
-                Combos Ouro 24k + Esmeraldas
+                Cangas & Minérios para Exportação
               </button>
             </li>
             <li>
@@ -186,7 +186,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenConcierge }) =
           <span>•</span>
           <span>Balneário Camboriú, SC</span>
           <span>•</span>
-          <span>Padrão Internacional GIA/IGI</span>
+          <span>Padrão Internacional FEEG / UB Barcelona</span>
         </div>
       </div>
     </footer>
